@@ -1,7 +1,12 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 import movies from './../../movies.js';
+import './style.css';
+
+let activeStyle = {backgroundColor: "dodgerblue", color: "white", padding: 10 }
+let notActiveStyle = {backgroundColor: "white", color:"darkblue", padding: 10 }
+
 
 const MovieList = () => {
 	return (
@@ -9,7 +14,13 @@ const MovieList = () => {
 			<ul>
 				{
 					movies.map((movie) => (
-						<li key={movie.id}><Link to={`/movies/${movie.id}`}>{movie.title}</Link></li>
+						<li key={movie.id}>
+							<NavLink	style={({isActive}) => isActive ? activeStyle : notActiveStyle}	
+										to={`/movies/${movie.id}`}
+										>
+										{movie.title}
+							</NavLink>
+						</li>
 					))
 				}
 			</ul>

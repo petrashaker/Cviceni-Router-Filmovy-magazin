@@ -13,6 +13,7 @@ module.exports = {
     historyApiFallback: true,
     contentBase: path.join(__dirname, 'dist'),
     writeToDisk: true,
+    port: 8081,
   },
   resolve: {
     extensions: ['.js', '.jsx'],

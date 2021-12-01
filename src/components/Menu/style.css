@@ -1,0 +1,13 @@
+html {box-sizing: border-box;}
+*,::before, ::after {box-sizing: inherit;}
+
+.menu {
+    display: flex;
+    background-color: lightskyblue;
+    color: white;
+}
+
+.menu__link:hover {
+    background-color: darkblue;
+    color: white;
+}  
